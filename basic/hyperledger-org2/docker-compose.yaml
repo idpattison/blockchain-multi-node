@@ -18,14 +18,6 @@ services:
     networks:
       - byfn
 
-  peer1.org2.example.com:
-    container_name: peer1.org2.example.com
-    extends:
-      file:  base/docker-compose-base.yaml
-      service: peer1.org2.example.com
-    networks:
-      - byfn
-
   cli:
     container_name: cli
     image: hyperledger/fabric-tools
@@ -49,8 +41,8 @@ services:
         - ./crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
         - ./scripts:/opt/gopath/src/github.com/hyperledger/fabric/peer/scripts/
         - ./channel-artefacts:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artefacts
+        - ./channel-block:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-block
     depends_on:
       - peer0.org2.example.com
-      - peer1.org2.example.com
     networks:
       - byfn
