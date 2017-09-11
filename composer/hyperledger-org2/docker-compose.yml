@@ -38,6 +38,7 @@ services:
     volumes:
         - /var/run/:/host/var/run/
         - ./:/etc/hyperledger/configtx
+        - ./channel-block:/opt/gopath/src/github.com/hyperledger/fabric/channel-block
         - ./crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp:/etc/hyperledger/peer/msp
         - ./crypto-config/peerOrganizations/org2.example.com/users:/etc/hyperledger/msp/users
     depends_on:

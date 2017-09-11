@@ -17,6 +17,6 @@ echo "Have you copied the composerchannel.block file??"
 sleep 15
 
 # Join peer0.org2.example.com to the channel.
-docker exec -e "CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/users/Admin@org2.example.com/msp" peer0.org2.example.com peer channel join -b composerchannel.block
+docker exec -e "CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/users/Admin@org2.example.com/msp" peer0.org2.example.com peer channel join -b ./channel-block/composerchannel.block
 
 cd ../..
