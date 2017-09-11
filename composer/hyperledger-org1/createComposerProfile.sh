@@ -27,6 +27,10 @@ cat << EOF > ~/.composer-connection-profiles/hlfv1/connection.json
         {
             "requestURL": "grpc://localhost:7051",
             "eventURL": "grpc://localhost:7053"
+        },
+        {
+            "requestURL": "grpc://peer0.org2.example.com:7051",
+            "eventURL": "grpc://peer0.org2.example.com:7053"
         }
     ],
     "keyValStore": "${HOME}/.composer-credentials",
